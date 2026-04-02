@@ -1,8 +1,9 @@
 {
-    "editor.snippetSuggestions": "bottom",
+    "editor.snippetSuggestions": "none",
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.wordBasedSuggestions": "allDocuments",
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
-    ]
+    ],
+    "terminal.integrated.suggest.inlineSuggestion": "off"
 }
