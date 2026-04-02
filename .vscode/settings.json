@@ -1,0 +1,8 @@
+{
+    "editor.snippetSuggestions": "bottom",
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.wordBasedSuggestions": "allDocuments",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ]
+}
