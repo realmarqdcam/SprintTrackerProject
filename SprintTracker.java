@@ -27,6 +27,7 @@ public class SprintTracker {
             System.out.println(e.getMessage());
         }
     }
+    
     public static void Status(Connection pop) {
         if (pop != null) {
             System.out.println("Connection to database successful!");
