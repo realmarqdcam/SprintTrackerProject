@@ -2,7 +2,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Scanner;
 
 public class SprintTracker {
@@ -38,17 +37,17 @@ public class SprintTracker {
             try {
 
                 while (true) {
-                    System.out.println("Do you want to record a new performance? (Y/N)");
+                    System.out.print("Do you want to record a new performance(Y/N)?  ");
                     String QA = plug.nextLine();
                         if (QA.equalsIgnoreCase("Y")) {
-                             System.out.println("Enter the date of the event (MM/DD/YYYY): ");
+                             System.out.print("Enter the date of the event (MM/DD/YYYY): ");
                                 String date = plug.nextLine();
-                            System.out.println("Enter the event (e.g. 100M, 200M, etc.): ");
+                            System.out.print("Enter the event (e.g. 100M, 200M, etc.): ");
                                 String event = plug.nextLine();
-                            System.out.println("Enter the time in seconds: ");
+                            System.out.print("Enter the time in seconds: ");
                                 double time_Seconds = plug.nextDouble();
                                     plug.nextLine();
-                            System.out.println("Enter any notes about the performance: ");
+                            System.out.print("Enter any notes about the performance: ");
                                 String note = plug.nextLine();
 
                             lol.setString(1, date);
@@ -69,11 +68,6 @@ public class SprintTracker {
                             System.out.println("Invalid input. Please enter 'Y' or 'N'.");
                         }
                 }
-                    /*lol.setString(2, "12/2/2023");
-                    lol.setString(3, "200M");
-                    lol.setDouble(4, 22.41);
-                    lol.setString(5, "Opener and SB");
-                    */
             } catch (SQLException e) {
                 System.out.println(e.getMessage());
             }
