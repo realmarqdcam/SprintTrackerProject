@@ -12,7 +12,6 @@ public class SprintTracker {
 
     public static void main (String [] args) {
         String url = "jdbc:sqlite:C:/Users/marqd/NewProjectJST/test.db";
-        System.out.println(new java.io.File("test.db").getAbsolutePath());
         String sql = "INSERT INTO test (Date, Event, Time_Seconds, Note) VALUES (?, ?, ?, ?)";
 
         Scanner plug = new Scanner(System.in);
@@ -93,7 +92,6 @@ public class SprintTracker {
         this.event = event;
     }
     public double setTime_Seconds (double time_Seconds) {
-        this.time_Seconds = time_Seconds;
         return time_Seconds;
     }
     public void setNote (String note) {
