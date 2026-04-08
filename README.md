@@ -1,6 +1,6 @@
 # SprintTracker
 
-A terminal-based athletic performance logging application built in Java. SprintTracker connects to a SQLite database and allows a user to record sprint session data in real time — event, date, time, and notes — through an interactive command-line interface.
+A terminal-based athletic performance logging application built in Java. SprintTracker connects to a SQLite database and allows a user to record sprint session data in real time, those being: date, event, time, and notes, through an interactive command-line interface.
 
 ---
 
@@ -46,16 +46,16 @@ The previous iteration of this program used a hardcoded `Statement` with static 
 Maven was available in the development environment but intentionally excluded. For a single-developer project at this scope, placing the `sqlite-jdbc` driver manually in a `lib/` folder achieves the same result with zero configuration overhead. Simplicity was the right call here.
 
 **DB Browser for Schema Creation**
-The database schema was created directly in DB Browser using `Execute SQL` rather than programmatically through the application. This kept the Java code focused on its actual responsibility — session logic — rather than database administration.
+The database schema was created directly in DB Browser using `Execute SQL` rather than programmatically through the application. This kept the Java code focused on its actual session logic rather than database administration.
 
 ---
 
 ## Current Limitations
 
-- **Insert only** — SprintTracker currently supports record creation. Read, update, and delete operations are not yet implemented.
-- **No input validation** — entering a non-numeric value where a decimal is expected (e.g., `Time_Seconds`) will cause the program to crash. Input is not sanitized at the application layer.
+- SprintTracker currently supports record creation. Read, update, and delete operations are not yet implemented.
+- Entering a non-numeric value where a decimal is expected (e.g., `Time_Seconds`) will cause the program to crash. Input is not sanitized at the application layer.
 - **Hardcoded database path** — the connection URL points to an absolute local file path. Portability requires updating this value manually.
-- **Terminal only** — there is no graphical interface. All interaction happens through the command line.
+- There is no graphical interface. All interaction happens through the command line.
 
 ---
 
@@ -71,7 +71,7 @@ The database schema was created directly in DB Browser using `Execute SQL` rathe
 
 ## Data Visualization
 
-Performance data is exported to CSV and connected to a Tableau Public dashboard tracking indoor and outdoor 400m progression over time — split by season, with yearly averages overlaid.
+Performance data is exported to CSV and connected to a Tableau Public dashboard tracking indoor and outdoor 400m progression over time, being split by season with pinpoint performances and yearly averages.
 
 *Dashboard link — coming soon*
 
@@ -104,4 +104,4 @@ This project is a personal development tool, but feedback, suggested improvement
 
 ## Author
 
-Built by Marques — athlete, coach, and developer in progress.
+Built by Marques — student-athlete and developer in progress.
